@@ -42,6 +42,10 @@ Important libraries to "pip install":
 
 To tell if you are utilising your Nvidia graphics card, in your command prompt, while in the conda environment, type "nvidia-smi". You should see your graphics card and when you're notebook is running you should see your utilisation increase.
 
+# Prerequisites
+
+These have been run with Nvidia CUDA version 12.2 installed on the system. It has not been tested with older versions.
+
 # Installation
 
 1. Open a terminal
@@ -67,11 +71,15 @@ conda activate LlamaIndexRAGLinux
 code .
 ```
 6. Choose a a Jupyter Notebook file to open
-7. On the top-right you may need to choose the newly created kernel. In the top-right if it says "Select Kernel", click it and choose your Python environment... and then "LlamaIndexRAGLinux".
+7. On the top-right you may need to choose the newly created kernel. In the top-right if it says "Select Kernel", click it and then click on "Python environment..." and then "LlamaIndexRAGLinux".
 8. Download the corresponding model files from HuggingFace (links above) and save them in a **Models** folder
 9. Run the Jupyter Notebook
 
-### Output examples
+
+# Performance
+I noticed a considerable improvement in the loading time of models under Linux than under WSL2 in Windows. What would take minutes in WSL2 under Windows would take seconds in Linux (on the same computer). This made working with these Linux files more time efficient.
+
+# Output examples
 
 Question asked of the model based on the story:
 > Summarise the story for me
