@@ -17,8 +17,7 @@ Your Data:
 - Add Word documents to the "Data" folder for the RAG to use
 
 Package versions:
-- See the "conda_package_versions.txt" for the full list of versions in the conda environment (generated using "conda list").
-- See/utilise the "requirements.txt" file (note that you need to have installed the CUDA Toolkit using the instructions below, the versions are very important).
+- See the installation section below where you can install a conda environment with all the working package versions
 
 Local LLMs:
 - Put your downloaded LLM files into a "Models" folder
@@ -32,13 +31,6 @@ Local LLMs:
 - https://huggingface.co/TheBloke/phi-2-GGUF (Quantized)
 - https://huggingface.co/afrideva/phi-2-GGUF (FP16)
 - https://huggingface.co/TheBloke/SOLAR-10.7B-Instruct-v1.0-GGUF
-
-Important libraries to "pip install":
-- llama-cpp-python
-- transformers
-- llama-index
-- docx2txt
-- sentence-transformers
 
 To tell if you are utilising your Nvidia graphics card, in your command prompt, while in the conda environment, type "nvidia-smi". You should see your graphics card and when you're notebook is running you should see your utilisation increase.
 
