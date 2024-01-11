@@ -134,14 +134,13 @@ Note: Impressively, Mixtral 8X7B appears to be adding the RAG source numbers (e.
 
 ---
 **Phi-2: [Quantized]**
-
+```
 I could not get this model to respond to the questions. I've tried different prompts, context lengths, retrieved chunks - but no luck. I'll continue to try different things.
 ```
 ---
 **Phi-2: [FP16]**
-
+```
 See Notes above for Phi-2 [Quantized] regarding context-length and persona. They apply here, too.
-
 ```
 
 ---
