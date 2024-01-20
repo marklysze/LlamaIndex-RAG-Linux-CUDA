@@ -71,6 +71,16 @@ code .
 # Performance
 I noticed a considerable improvement in the loading time of models under Linux than under WSL2 in Windows. What would take minutes in WSL2 under Windows would take seconds in Linux (on the same computer). This made working with these Linux files more time efficient.
 
+---
+
+#### Using Windows?
+Check out the equivalent notebooks in this repository: [https://github.com/marklysze/LlamaIndex-RAG-WSL-CUDA](https://github.com/marklysze/LlamaIndex-RAG-WSL-CUDA)
+
+#### Interested in LangChain?
+Check out this repository which shows RAG with LangChain: [https://github.com/marklysze/LangChain-RAG-Linux](https://github.com/marklysze/LangChain-RAG-Linux)
+
+---
+
 # Output examples
 
 Question asked of the model based on the story:
