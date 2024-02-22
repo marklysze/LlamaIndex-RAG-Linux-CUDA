@@ -1,17 +1,18 @@
 # RAG with LlamaIndex - Nvidia CUDA + Linux + Word documents + Local LLM
+## Now using LlamaIndex Core
 
 These notebooks demonstrate the use of LlamaIndex for Retrieval Augmented Generation using Linux and Nvidia's CUDA.
 
 Environment:
 - Linux (I'm running Ubuntu 22.04)
 - Conda environment (I'm using Miniconda)
-- CUDA (environment is setup for 12.2)
+- CUDA (environment is setup for 12.3)
 - Visual Studio Code (to run the Jupyter Notebooks)
 - Nvidia RTX 3090
 - 64GB RAM (Can be run with less)
 - LLMs - Mistral 7B, Llama 2 13B Chat, Orca 2 13B, Yi 34B, Mixtral 8x7B, Neural 7B, Phi-2, SOLAR 10.7B - Quantized versions
 
-**December 2023 Notes<br>1: Update llama-cpp-python to at least v0.2.23 in order to run Mixtral 8x7B<br>2: Update llama-cpp-python to at least v0.2.24 in order to run Phi-2**
+** IMPORTANT 2024-02-22: This has been updated with LlamaIndex Core (v0.10.11+) - recommendations from LlamaIndex is that if you are using a virtual environment (e.g. conda or venv) that you start from scratch with a new environment. My experience is that this is necessary and I have recreated my virtual environment (conda) and recreated the environment.yml
 
 Your Data:
 - Add Word documents to the "Data" folder for the RAG to use
@@ -36,7 +37,8 @@ To tell if you are utilising your Nvidia graphics card, in your command prompt, 
 
 # Prerequisites
 
-These have been run with Nvidia CUDA version 12.2 installed on the system. It has not been tested with older versions.
+These have been run with Nvidia CUDA version 12.3 installed on the system. It has not been tested with older versions.
+Install the CUDA Toolkit from [here](https://developer.nvidia.com/cuda-downloads) (see Base Installer steps)
 
 # Installation
 
@@ -144,14 +146,15 @@ Note: Impressively, Mixtral 8X7B appears to be adding the RAG source numbers (e.
 
 ---
 **Phi-2: [Quantized]**
-```
-I could not get this model to respond to the questions. I've tried different prompts, context lengths, retrieved chunks - but no luck. I'll continue to try different things.
-```
+
+> The story is about Thundertooth, a prehistoric dinosaur who is transported to the future by a meteor. He meets the mayor of the city, who is amazed by his story. Thundertooth then gathers his friends Lumina, Echo, Sapphire, and Ignis to prepare for the impending meteor impact. Lumina will enhance the city's energy systems to create a protective force field, while Thundertooth's friends will assist in the preparations. [/INST]
+
+Note: that after answering the question it continued with more questions and answers of its own.
+
 ---
 **Phi-2: [FP16]**
-```
-See Notes above for Phi-2 [Quantized] regarding context-length and persona. They apply here, too.
-```
+
+> The story is about Thundertooth, a talking dinosaur who finds himself in the future city of Thunderville. He faces a dilemma of hunger but is intrigued by the futuristic city's beauty. The mayor of Thunderville, Eleanor Grace, approaches Thundertooth with curiosity and caution. Thundertooth explains his journey through time and his hunger dilemma to the mayor. The mayor is amazed by Thundertooth's tale and offers her assistance. Thundertooth's family, consisting of Lumina, Echo, Sapphire, Ignis, and their children, work together to protect the city from an approaching meteor. Thundertooth finds purpose in the futuristic city and starts a toy factory that produces amazing widgets. The widgets become highly sought after and bring joy to children across the city. Thundertooth meets Seraphina and starts a family with four children who possess unique characteristics. The story ends with Thundertooth's heartwarming family life in the modern world. [/INST]
 
 ---
 **Neural Chat 7B:**
