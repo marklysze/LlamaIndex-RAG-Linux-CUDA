@@ -12,7 +12,7 @@ Environment:
 - 64GB RAM (Can be run with less)
 - LLMs - Mistral 7B, Llama 2 13B Chat, Orca 2 13B, Yi 34B, Mixtral 8x7B, Neural 7B, Phi-2, SOLAR 10.7B - Quantized versions
 
-** IMPORTANT 2024-02-22: This has been updated with LlamaIndex Core (v0.10.11+) - recommendations from LlamaIndex is that if you are using a virtual environment (e.g. conda or venv) that you start from scratch with a new environment. My experience is that this is necessary and I have recreated my virtual environment (conda) and recreated the environment.yml
+** IMPORTANT 2024-02-22: This has been updated with LlamaIndex Core (v0.10.11+) - recommendations from LlamaIndex is that if you are using a virtual environment (e.g. conda or venv) that you start from scratch with a new environment. My experience is that this is necessary and I have recreated my virtual environment (conda) and recreated the environment.yml . [See this comment from them](https://github.com/run-llama/llama_index/issues/11279#issuecomment-1959706734).
 
 Your Data:
 - Add Word documents to the "Data" folder for the RAG to use
